@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" href="../CSS/footer.css">
+	
+	<script>
+		var a=new Array();
+		a[0]=new Array(4);
+		a[1]=new Array(4);
+		a[2]=new Array(4);
+		a[3]=new Array(4);
+
+		for(i=0;i<4;i++)
+	    {
+	    	for(j=0;j<4;j++)
+	    		{a[i][j]=0;}
+	    }
+
+
+
+	    function table()
+	    {   
+
+	    	document.write("<table border align='center'>");
+	    	document.write("<tr>"+"<td>CITY \\ CAR </td>"+"<th>SCORPIO</TH>"+"<th>ALTO</TH>"+"<th>K10</TH>"+"<th>SWIFT</TH>"+"</TR>");
+	    	  for(i=0;i<4;i++)
+	    	  { document.write("<TR>");
+	    	    if(i==0)
+	    	    document.write("<TH>DELHI</TH>");
+	    	   else
+	    	   	 if(i==1)
+	    	    document.write("<TH>MUMBAI</TH>");
+	    	   else
+	    	   	 if(i==2)
+	    	    document.write("<TH>DEHRADUN</TH>");
+	    	    else
+	    	   	 if(i==3)
+	    	    document.write("<TH>GOA</TH>");
+
+
+	    	    for(j=0;j<4;j++)
+	    	    {
+                   document.write("<td align='center'>"+a[i][j]+"</td>");
+	    	    }
+
+
+	    	   document.write("</TR>");
+
+
+	    	  }
+	    }
+
+    </script>
+</head>
+<body bgcolor="red">
+	<script>
+		     function update()
+		     {
+		     	i=parseInt(document.getElementById("city").value);
+		     	j=parseInt(document.getElementById("car").value);
+
+                 (a[i][j])++;
+
+		     }
+	</script>
+
+   
+	<center><h1 > CAR SURVEY </h1></center>
+	<HR/>
+	<BR>
+	<form>
+	 <TABLE cellspacing=10px align="center">
+	 <TR>
+	    <TD> CITY : </TD>
+	    <TD>
+	          <select id="city">
+	            <option value='0'> Delhi</option>
+	            <option value='1'> Mumbai</option>
+	            <option value='2'> Dehradun</option>
+	            <option value='3'> Goa</option>
+	           </select>
+	    </TD>
+
+
+	    <TD> CAR : </TD>
+	    <TD>
+	          <select id="car">
+	            <option value='0'> SCORPIO</option>
+	            <option value='1'> ALTO</option>
+	            <option value='2'> K10</option>
+	            <option value='3'> SWIFT</option>
+	           </select>
+	    </TD>
+
+	   </TR>
+	   <tr align="center" >
+	   	  <td colspan="2"> <input type="button" value="generate result" onclick="table();"></td>
+	   	  <td colspan="2"> <input type="button" value="SUBMIT" onclick="update();"></td>
+	   </tr >
+	   </TABLE>
+	   </form> 
+
+	 <footer class="footer">Akhil Tiwari BTECH (CSE IV<sub>th</sub> SEM) SECTION:A ROLLNO:02 </footer>
+
+
+</body>
+</html>

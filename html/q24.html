@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="../CSS/footer.css">
+<script type="text/javascript">
+function checkSsn(){
+    var y;
+var i=parseInt(document.f1.payoption.value);
+var ssn = document.f1.ssn.value;
+if(i==0)
+{
+y=/^[5][1-5][0-9]{14}$/;
+if (y.test(ssn)) 
+  window.alert("VALID SSN");
+else
+  window.alert("INVALID SSN");
+}
+else if(i==1)
+{
+y=/^[4]([0-9]{12} | [0-9]{15})$/;
+if (y.test(ssn))
+  window.alert("VALID SSN");
+else
+  window.alert("INVALID SSN");
+}
+else
+{
+y=/^[3][4-7][0-9]{13}$/;
+if (y.test(ssn)) 
+  window.alert("VALID SSN");
+else
+  window.alert("INVALID SSN");
+}
+}
+</script>
+</head>
+
+<body BGCOLOR="POWDERBLUE">
+<CENTER><h1>VALIDATING CREDIT CARDS</h1></CENTER>
+<BR>
+<HR>
+<BR>
+<center>
+<h3>Payment Option</h3><br>
+<table>
+<form name="f1">
+<tr>
+    <td> <input type="radio" name="payoption" value="0" checked></td><td>VISA</td>
+</tr>
+<tr>
+    <td> <input type="radio" name="payoption" value="1" ></td><td>DEBIT CARD</td>
+</tr>
+<tr>
+    <td> <input type="radio" name="payoption" value="2" ></td><td>MASTER CARD</td>
+</tr>
+<tr colspan=2>
+    <th>
+<input type="text" name="ssn">
+    </th>
+</tr>
+<tr colspan=2>
+    <th>
+<input type="button" value="submit" onclick="checkSsn();">
+    </th>
+</tr>
+</form>
+</center>
+<footer class="footer">AKHIL TIWARI BTECH (CSE IV<sub>th</sub> SEM) SECTION:A ROLLNO:02 </footer>
+</body>
+</html>

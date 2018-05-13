@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<link rel="stylesheet" href="../CSS/footer.css">
+</head>
+<body>
+
+
+<center><h1>MATCH COUNTRY AND CAPITAL</h1></center>
+<BR>
+<HR>
+<CENTER>
+Choose Country <select id="clist" >
+<option value="INDIA">INDIA</OPTION> 
+<option value="PAKISTAN">PAKISTAN</OPTION>
+<option value="ENGLAND">ENGLAND</OPTION>
+<option value="USA">USA</OPTION>
+<option value="JAPAN">JAPAN</OPTION>
+</SELECT>
+Choose Capital <select id="caplist" >
+
+<option value="LONDON">LONDON</OPTION>
+<option value="WASHINGTON DC">WASHINGTON DC</OPTION>
+<option value="TOKYO">TOKYO</OPTION>
+<option value="NEWDELHI">NEW DELHI</OPTION> 
+<option value="ISLAMABAD">ISLAMABAD</OPTION>
+</SELECT>
+</CENTER>
+<BR>
+<CENTER>
+<INPUT TYPE="BUTTON" VALUE="MATCH" ONCLICK="match1();">
+</CENTER>
+
+<SCRIPT>
+
+function match1()
+{
+    c=document.getElementById("clist").value;
+    cap=document.getElementById("caplist").value;
+
+     if( c=="INDIA" )
+    {
+
+         if(cap=="NEWDELHI")
+         {
+            alert("CORRECT ANSWER");
+        }
+        else
+        { alert("WRONG ANSWER : THE CORRECT ANSWER IS NEW DELHI");
+       }
+    }
+else
+ if( c=="PAKISTAN" )
+    {
+
+         if(cap=="ISLAMABAD")
+         {
+            alert("CORRECT ANSWER");
+         }
+        else
+        { alert("WRONG ANSWER : THE CORRECT ANSWER IS ISLAMABAD");
+        }
+    }
+else
+ if( c=="JAPAN" )
+    {
+
+         if(cap=="TOKYO")
+         {
+            alert("CORRECT ANSWER");
+        }
+        else
+        { alert("WRONG ANSWER : THE CORRECT ANSWER IS TOKYO");
+         }
+     } 
+
+ else
+ if( c=="USA" )
+    {
+
+         if(cap=="WASHINGTON DC")
+         {
+            alert("CORRECT ANSWER");
+        }
+        else
+        { alert("WRONG ANSWER : THE CORRECT ANSWER IS WASHINGTON DC");
+        }
+    }
+
+
+ else
+ if( c=="ENGLAND" )
+    {
+
+         if(cap=="LONDON")
+         {
+            alert("CORRECT ANSWER");
+        }
+        else
+        { alert("WRONG ANSWER : THE CORRECT ANSWER IS LONDON");
+        }
+    }
+
+}
+
+</SCRIPT>
+
+	 <footer class="footer">AKHIL TIWARI BTECH (CSE IV<sub>th</sub> SEM) SECTION:A ROLLNO:02 </footer>
+
+</body>
+</html>

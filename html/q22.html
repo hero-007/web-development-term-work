@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+	<title>Demonstraiton of events</title>
+
+<link rel="stylesheet" href="../CSS/footer.css">
+
+<script>
+
+function Check()
+{
+age=document.getElementById("ch1").value;
+age=parseInt(age);
+nation=document.f1.ch.value;
+if (age>=18 && nation=="Indian")
+	window.alert("You are Elligible to vote");
+else
+	window.alert("Sorry! You are not elligible to vote");
+}
+
+</script>
+</head>
+
+<body >
+<CENTER>
+<h1>ARE YOU ELIGIBLE TO VOTE??</h1>
+</CENTER>
+<br><HR>
+<form name="f1">
+<br><CENTER>
+<B>AGE : </B><input type="text" id="ch1" size=20 length=3 min=1 pattern="[0-9]+" placeholder="Enter your age"> 
+<br><br><br>
+
+<B>NATIONALITY :</B><br><br><input type="radio" value="Indian" name="ch">Indian
+<br>
+<input type="radio" value="Other" name="ch">Other
+
+
+<br><br>
+
+<input type="button" value="Check" onclick="Check();">
+</CENTER>
+
+</form><footer class="footer">AKHIL TIWARI BTECH (CSE IV<sub>th</sub> SEM) SECTION:A ROLLNO:02 </footer>
+</body>
+</html>

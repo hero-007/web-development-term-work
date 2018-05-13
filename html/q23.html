@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+
+<link rel="stylesheet" href="../CSS/footer.css">
+
+<script>
+function enable()
+{
+if(document.f1.b1.disabled)
+    document.f1.b1.disabled=false;
+}
+function cal()
+{
+    var amt=0;
+    if(document.f1.chkburger.checked)
+        amt=amt+parseInt(document.f1.chkburger.value);
+     if(document.f1.chkspring.checked)
+        amt=amt+parseInt(document.f1.chkspring.value);
+     if(document.f1.chkpizza.checked)
+        amt=amt+parseInt(document.f1.chkpizza.value);
+    var dis=amt;
+
+    if(document.f1.payoption.value=="cash")
+        dis=dis-(dis*0.05);
+    document.f1.result.value=dis;
+}
+</script>
+</head>
+
+<body <body>
+
+<center>
+<H1>THE CANTEEN</H1>
+<BR><hr><br>
+<div id="main">
+<h2>Bill Calculation</h2>
+<table>
+
+<form name="f1">
+<tr>
+    <td> <input type="checkbox" id="chkburger" value="10" onclick="enable();"></td><td>Burger (Rs 20)</td>
+</tr>
+<tr>
+    <td> <input type="checkbox" id="chkspring" value="40" onclick="enable();"></td><td>Spring Roll (Rs 40)</td>
+</tr>
+<tr>
+    <td> <input type="checkbox" id="chkpizza" value="80" onclick="enable();"></td><td>Pizza (Rs 80)</td>
+</tr>
+<tr>
+    <td> <input type="radio" name="payoption" value="cash" checked></td><td>CASH</td>
+</tr>
+<tr>
+    <td> <input type="radio" name="payoption" value="card" ></td><td>DEBIT CARD</td>
+</tr>
+<tr colspan=2>
+    <th>
+<input type="button" value="Calculate Bill" onclick="cal();" name="b1" disabled>
+    </th>
+</tr>
+<tr colspan=2>
+    <th>
+<input type="text" name="result" disabled>
+    </th>
+</tr>
+</form>
+</div>
+</center>
+<footer class="footer">AKHIL TIWARI BTECH (CSE IV<sub>th</sub> SEM) SECTION:A ROLLNO:02 </footer>
+</body>
+</html>
